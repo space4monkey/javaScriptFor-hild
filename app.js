@@ -106,3 +106,52 @@
 // console.log(animals);
 // animals.unshift(lastAnimal);
 // console.log(animals);
+
+// var furryAnimals = ["Альпака", "Кольцехвостый лемур", "Йети"];
+// var scalyAnimals = ["Удав", "Годзилла"];
+// var featherAnimals = ["Ара", "Додо"];
+// var furryAnimalsAndScalyAnimals = furryAnimals.concat(
+//   scalyAnimals,
+//   featherAnimals
+// );
+// console.log(furryAnimalsAndScalyAnimals);
+// console.log(scalyAnimals);
+// console.log(furryAnimals);
+
+// var colors = ["красный", "зеленый", "синий"];
+// const num = colors.indexOf("синий");
+// const num0 = colors.indexOf("зеленый");
+// console.log(num);
+// console.log(num0);
+// const num1 = colors.indexOf("фиолетовый");
+// console.log(num1);
+// const insects = ["Пчела", "Муравей", "Пчела", "Муравей"];
+
+// var boringAnimals = ["Мартышка", "Кот", "Рыба", "Ящерица"];
+// console.log(boringAnimals.join());
+// console.log(boringAnimals.join("-"));
+// console.log(boringAnimals.join("*"));
+// console.log(boringAnimals.join(" "));
+// console.log(boringAnimals.join(" и "));
+
+var landmarks = [];
+landmarks.push("Мой дом");
+landmarks.push("Дорожка к дому");
+landmarks.push("Мигающий фонарь");
+landmarks.push("Протикающий гидрант");
+landmarks.push("Пожарная станция");
+landmarks.push("Приют для кошек");
+landmarks.push("Моя бывшая школа");
+landmarks.push("Дом подруги");
+// var wayback = landmarks.pop();
+// console.log(wayback);
+// console.log(landmarks);
+
+console.log(landmarks.pop());
+console.log(landmarks.pop());
+console.log(landmarks.pop());
+console.log(landmarks.pop());
+console.log(landmarks.pop());
+console.log(landmarks.pop());
+console.log(landmarks.pop());
+console.log(landmarks.pop());
