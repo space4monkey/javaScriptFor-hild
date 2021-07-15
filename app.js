@@ -134,24 +134,94 @@
 // console.log(boringAnimals.join(" "));
 // console.log(boringAnimals.join(" и "));
 
-var landmarks = [];
-landmarks.push("Мой дом");
-landmarks.push("Дорожка к дому");
-landmarks.push("Мигающий фонарь");
-landmarks.push("Протикающий гидрант");
-landmarks.push("Пожарная станция");
-landmarks.push("Приют для кошек");
-landmarks.push("Моя бывшая школа");
-landmarks.push("Дом подруги");
+// var landmarks = [];
+// landmarks.push("Мой дом");
+// landmarks.push("Дорожка к дому");
+// landmarks.push("Мигающий фонарь");
+// landmarks.push("Протикающий гидрант");
+// landmarks.push("Пожарная станция");
+// landmarks.push("Приют для кошек");
+// landmarks.push("Моя бывшая школа");
+// landmarks.push("Дом подруги");
 // var wayback = landmarks.pop();
 // console.log(wayback);
 // console.log(landmarks);
 
-console.log(landmarks.pop());
-console.log(landmarks.pop());
-console.log(landmarks.pop());
-console.log(landmarks.pop());
-console.log(landmarks.pop());
-console.log(landmarks.pop());
-console.log(landmarks.pop());
-console.log(landmarks.pop());
+// console.log(landmarks.pop());
+// console.log(landmarks.pop());
+// console.log(landmarks.pop());
+// console.log(landmarks.pop());
+// console.log(landmarks.pop());
+// console.log(landmarks.pop());
+// console.log(landmarks.pop());
+// console.log(landmarks.pop());
+
+// var ran = Math.random();
+// console.log(Math.floor(ran * 4));
+
+// var randomWords = ["Взрыв", "Пещера", "СОБАКА", "САХАР", "ВАТА"];
+// var randomIndex = Math.floor(Math.random() * 5);
+// console.log(randomWords[randomIndex]);
+
+// var phrases = [
+//   "Звучит неплохо",
+//   "Да, это определенно надо сделать",
+//   "Не думаю, что это хорошая идея",
+//   "Может, не сегодня?",
+//   "Компьютер говорит нет",
+// ];
+// var randomIndex = Math.floor(Math.random() * 5);
+// console.log(phrases[randomIndex]);
+
+// var randomBodyParts = [
+//   "глаза",
+//   "нос",
+//   "череп",
+//   "уши",
+//   "ноги",
+//   "колени",
+//   "попа",
+// ];
+// var randomAdjectives = ["вонючая", "унылая", "дурацкая"];
+// var randomWords = ["муха", "выдра", "дубина", "мартышка", "крыса"];
+// var randomBodyPart = Math.floor(Math.random() * (randomBodyParts.length - 1));
+// var randomAdjective = Math.floor(Math.random() * (randomAdjectives.length - 1));
+// var randomWord = Math.floor(Math.random() * (randomWords.length - 1));
+// var randomInsult =
+//   "У тебя " +
+//   randomBodyParts[randomBodyPart] +
+//   " словно " +
+//   randomAdjectives[randomAdjective] +
+//   " " +
+//   randomWords[randomWord] +
+//   "!!!";
+// var randomInslt = [
+//   "У тебя",
+//   randomBodyParts[randomBodyPart],
+//   "словно",
+//   randomAdjectives[randomAdjective],
+//   randomWords[randomWord],
+// ];
+// console.log(randomInslt.join(" ") + "!!!");
+
+var cat = {
+  legs: 3,
+  "full name": "Гармония Филомена Уси-Пусечка Морган",
+  color: "Черепаховый",
+};
+console.log(cat["full name"]);
+console.log(cat.color);
+console.log(Object.keys(cat));
+
+var pusyCat = {};
+// pusyCat["legs"] = 3;
+// pusyCat["name"] = "Гармония";
+// pusyCat["color"] = "Черепховый";
+pusyCat.legs = 3;
+pusyCat.name = "Гармония";
+pusyCat.color = "Черепховый";
+console.log(pusyCat);
+
+var dog = { name: "Оладушек", legs: 4, IsAwesome: true };
+console.log(dog.isBrown);
+console.log(dog.name);
