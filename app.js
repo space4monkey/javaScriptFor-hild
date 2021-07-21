@@ -204,24 +204,119 @@
 // ];
 // console.log(randomInslt.join(" ") + "!!!");
 
-var cat = {
-  legs: 3,
-  "full name": "Гармония Филомена Уси-Пусечка Морган",
-  color: "Черепаховый",
-};
-console.log(cat["full name"]);
-console.log(cat.color);
-console.log(Object.keys(cat));
+// var cat = {
+//   legs: 3,
+//   "full name": "Гармония Филомена Уси-Пусечка Морган",
+//   color: "Черепаховый",
+// };
+// console.log(cat["full name"]);
+// console.log(cat.color);
+// console.log(Object.keys(cat));
 
-var pusyCat = {};
-// pusyCat["legs"] = 3;
-// pusyCat["name"] = "Гармония";
-// pusyCat["color"] = "Черепховый";
-pusyCat.legs = 3;
-pusyCat.name = "Гармония";
-pusyCat.color = "Черепховый";
-console.log(pusyCat);
+// var pusyCat = {};
+// // pusyCat["legs"] = 3;
+// // pusyCat["name"] = "Гармония";
+// // pusyCat["color"] = "Черепховый";
+// pusyCat.legs = 3;
+// pusyCat.name = "Гармония";
+// pusyCat.color = "Черепховый";
+// console.log(pusyCat);
 
-var dog = { name: "Оладушек", legs: 4, IsAwesome: true };
-console.log(dog.isBrown);
-console.log(dog.name);
+// var dog = { name: "Оладушек", legs: 4, IsAwesome: true };
+// console.log(dog.isBrown);
+// console.log(dog.name);
+
+//Массивы объектов
+// var dinosaurs = [
+//   { name: "Тиранозавр рекс", period: "Верхнемеловой" },
+//   { name: "Стегозавр", period: "Верхнеюрский" },
+//   { name: "Платозавр", period: "Трисовый" },
+// ];
+// console.log(dinosaurs[0]);
+// console.log(dinosaurs[0]["name"]);
+// console.log(dinosaurs[1]["period"]);
+// console.log(dinosaurs[0].name);
+
+// var anna = { name: "Анна", age: 11, luckyNumbers: [2, 4, 8, 16] };
+// var dave = { name: "Дэйв", age: 5, luckyNumbers: [3, 9, 40] };
+// var kate = { name: "Кейт", age: 9, luckyNumbers: [1, 2, 3] };
+
+// var friends = [anna, dave, kate];
+
+// console.log(friends[1]);
+// console.log(friends[2].luckyNumbers);
+// console.log(friends[0].luckyNumbers[1]);
+
+// var owedMoney = {};
+// owedMoney["Джимми"] = 5;
+// owedMoney["Анна"] = 7;
+// owedMoney["Элис"];
+// console.log(owedMoney);
+// console.log(owedMoney["Джимми"]);
+// owedMoney["Джимми"] += 3;
+// console.log(owedMoney);
+
+// var movies = {
+//   "В поисках Немо": {
+//     releaseDate: 2003,
+//     duration: 100,
+//     actors: ["Алберт Брукс", "Эллен Дедженерес", "Аександр Гоулд"],
+//     format: "DVD",
+//   },
+//   "Звезные войны: Эпизод 6 - Возращение бомжа": {
+//     releaseDate: 1983,
+//     duration: 134,
+//     actors: ["Марк Хэммилл", "Харисон Форд", "Аександр Гоулд"],
+//     format: "DVD",
+//   },
+//   Гарипоттер: {
+//     releaseDate: 2000,
+//     duration: 154,
+//     actors: ["Марк Хэммилл", "Харисон Форд", "Аександр Гоулд"],
+//     format: "Blu-ray",
+//   },
+// };
+
+// var findingNemo = movies["В поисках Немо"];
+// console.log(findingNemo.duration);
+// console.log(findingNemo.format);
+// console.log(findingNemo.actors);
+// console.log(movies);
+
+// var cars = {
+//   releaseDate: 2006,
+//   duration: 117,
+//   actors: ["Марк Хэммилл", "Харисон Форд", "Аександр Гоулд"],
+//   format: "Blu-ray",
+// };
+
+// movies["Тачки"] = cars;
+
+// console.log(Object.keys(movies));
+// //#1
+// var scores = {
+//   Маским: 0,
+//   Наташа: 1,
+//   Дима: 0,
+// };
+// console.log(Object.keys(scores));
+// console.log(scores);
+// scores["Маским"] += 1;
+// console.log(scores);
+
+// //#2
+// var myCrazyObject = {
+//   name: "Нелепый объект",
+//   "some array": [7, 9, { purpose: "путаница", number: 123 }, 3.3],
+//   "random animal": "Банановая акула",
+// };
+// console.log(Object.keys(myCrazyObject));
+// console.log(myCrazyObject["some array"][2].number);
+
+//условия и циклы
+
+var name = "Николай";
+console.log("Привет, " + name);
+if (name.length > 6) {
+  console.log("Ну и длинное же утебя имечко!");
+}
