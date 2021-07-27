@@ -388,38 +388,40 @@
 //   console.log(animals[i] + " - прекрасное животное");
 // }
 
-var alphabet = "абвгдеёжзийклмнопрстуфхцчшщьъыэюя";
-var randomString = "";
-while (randomString.length < 10) {
-  var i = Math.floor(Math.random() * alphabet.length);
-  randomString = randomString + alphabet[i];
-  if (randomString.length === 10) {
-    console.log(randomString);
-  }
-}
+// var alphabet = "абвгдеёжзийклмнопрстуфхцчшщьъыэюя";
+// var randomString = "";
+// while (randomString.length < 10) {
+//   var i = Math.floor(Math.random() * alphabet.length);
+//   randomString = randomString + alphabet[i];
+//   if (randomString.length === 10) {
+//     console.log(randomString);
+//   }
+// }
 
-var input = "javascript is awesome";
-var output = "";
-for (i = 0; i < input.length; i++) {
-  if (input[i] === "a") {
-    // var x = (input[i] = "4");
-    var x = (input[i] = "4");
-    output = output + x;
-    // console.log(output);
-  } else if (input[i] === "e") {
-    var x = (input[i] = "3");
-    output = output + x;
-  } else if (input[i] === "i") {
-    var x = (input[i] = "1");
-    output = output + x;
-  } else if (input[i] === "o") {
-    var x = (input[i] = "0");
-    output = output + x;
-  } else {
-    output = output + input[i];
-    // console.log(output);
-  }
-  if (input.length === output.length) {
-    console.log(output);
-  }
-}
+// var input = "javascript is awesome";
+// var output = "";
+// for (i = 0; i < input.length; i++) {
+//   if (input[i] === "a") {
+//     // var x = (input[i] = "4");
+//     var x = (input[i] = "4");
+//     output = output + x;
+//     // console.log(output);
+//   } else if (input[i] === "e") {
+//     var x = (input[i] = "3");
+//     output = output + x;
+//   } else if (input[i] === "i") {
+//     var x = (input[i] = "1");
+//     output = output + x;
+//   } else if (input[i] === "o") {
+//     var x = (input[i] = "0");
+//     output = output + x;
+//   } else {
+//     output = output + input[i];
+//     // console.log(output);
+//   }
+//   if (input.length === output.length) {
+//     console.log(output);
+//   }
+// }
+
+//Глава 7
