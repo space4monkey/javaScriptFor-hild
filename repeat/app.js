@@ -31,5 +31,17 @@ dogPersik.isAwesome = true;
 console.log(dogPersik.isBorn); // undefined такого свойства нет
 console.log("He is awesome?");
 console.log(dogPersik.isAwesome);
-
+//debugger;
 // Массивы Объектов стр 75
+
+var dinosaurs = [
+  { name: "Тираннозавр рекс", period: "Верхнемеловой" },
+  { name: "Стегозар", period: "Верхгеюрский" },
+  { name: "Платеозавр", period: "Верхгеюрский" },
+];
+console.log(dinosaurs); //покажем массив
+console.log(dinosaurs[1]); // вызываем обьект массива
+console.log(dinosaurs[0]["name"]);
+dinosaurs[0].period;
+dinosaurs[1].period;
+// массив друзей стр 76
