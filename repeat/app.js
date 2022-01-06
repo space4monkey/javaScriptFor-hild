@@ -45,3 +45,13 @@ console.log(dinosaurs[0]["name"]);
 dinosaurs[0].period;
 dinosaurs[1].period;
 // массив друзей стр 76
+var anna = {name:"Анна", age:11,luckyNumbers:[2,4,8,16] };
+var dave = {name:"Дэйв",age:5,luckyNumbers:[3,9,10]};
+var kate = {name:"Кейт",age:9,luckyNumbers:[1,2,3]};
+
+var friends = [anna,dave,kate];
+console.log(friends[0]);
+console.log(friends[2].name);
+console.log(friends[2].luckyNumbers[1]);
+//что полезного можно сделать с обьектами
+// учет долгов
