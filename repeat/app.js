@@ -45,3 +45,62 @@ console.log(dinosaurs[0]["name"]);
 dinosaurs[0].period;
 dinosaurs[1].period;
 // массив друзей стр 76
+//--//
+//учет долгов
+
+var owedMoney = {};
+owedMoney["Джимми"] = 5;
+owedMoney["Анна"] = 7;
+owedMoney["Элис"];
+console.log(owedMoney[2]);
+owedMoney["Джимми"] += 3;
+console.log(owedMoney["Джимми"]);
+console.log(owedMoney);
+
+//хранение информации о фильмах
+var movies = {
+  "В поисках Немо": {
+    relaseDate: 2003,
+    duration: 100,
+    actors: ["Альберт Брукс", "Эллен Дедженерес", "Александра Гоулд"],
+    format: "DVD",
+  },
+  "Звездные войны ХХХ": {
+    relaseDate: 2003,
+    duration: 100,
+    actors: ["Альберт Брукс", "Эллен Дедженерес", "Александра Гоулд"],
+    format: "DVD",
+  },
+  "Гарри Потер и Кубок огня": {
+    relaseDate: 2003,
+    duration: 100,
+    actors: ["Альберт Брукс", "Эллен Дедженерес", "Александра Гоулд"],
+    format: "DVD",
+  },
+};
+
+console.log(movies["В поисках Немо"]);
+console.log(movies["В поисках Немо"].actors);
+console.log(movies["В поисках Немо"].format);
+
+var cars = {
+  relaseDate: 2006,
+  duration: 117,
+  actors: ["Альберт Брукс", "Эллен Дедженерес", "Александра Гоулд"],
+  format: "Blu-ray",
+};
+
+console.log(movies);
+movies["Тачки"] = cars; //добовляем еще один фильм
+console.log(Object.keys(movies));
+
+//упражнения
+//#2
+var myCrazyObject = {
+  name: "Нелепый объект",
+  "some array": [7, 9, { purpose: "путаница", number: 123 }, 3.3],
+  "random animal": "Банановая акула",
+};
+console.log(Object.keys(myCrazyObject));
+
+console.log(myCrazyObject["some array"][2].number); //решение
