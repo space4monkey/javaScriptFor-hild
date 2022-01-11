@@ -1,4 +1,3 @@
-
 // //Объекты
 // var cat = {
 //   legs: 3,
@@ -62,41 +61,79 @@
 //Условные конструкции
 
 var lemonChecken = false;
-var beefWithBlackBean =true;
-var sweerAndSourPork=true;
+var beefWithBlackBean = true;
+var sweerAndSourPork = true;
 
-if (lemonChecken){
+if (lemonChecken) {
   console.log("Отлично! Я буду курицу с лимоном!");
-} else if (beefWithBlackBean){
+} else if (beefWithBlackBean) {
   console.log("Заказываю говядину");
-}
-else if (sweerAndSourPork){
+} else if (sweerAndSourPork) {
   console.log("Ладно, закажу свнину.");
-}else {
+} else {
   console.log("Что ж, остается рис с яйцом.");
 }
 // циклы
 //while
 var sheepCounted = 0;
-while(sheepCounted<10){
+while (sheepCounted < 10) {
   console.log("Посчитать овец: " + sheepCounted + "!");
   sheepCounted++;
 }
 console.log("Хрррр");
 
 //Цикл for
-for(var sheepCounted2 = 0; sheepCounted2 < 10; sheepCounted2++){
-  console.log("Посчитать овец: "+sheepCounted2+"!");
+for (var sheepCounted2 = 0; sheepCounted2 < 10; sheepCounted2++) {
+  console.log("Посчитать овец: " + sheepCounted2 + "!");
 }
 console.log("Хрррр");
 
 //Цикл for, массивы и строки стр 105
-var animals = ["Лев","фламинго","белый медведь","удав"];
-for(var i =0; i < animals.length; i++){
+var animals = ["Лев", "фламинго", "белый медведь", "удав"];
+for (var i = 0; i < animals.length; i++) {
   console.log("В этои зоопарке есть " + animals[i] + ".");
-};
+}
 //работа со строками
 var name = "Ник";
-for (var i=0; i<name.length; i++){
-  console.log("в моём имени есть буква "+name[i]+".")
-};
+for (var i = 0; i < name.length; i++) {
+  console.log("в моём имени есть буква " + name[i] + ".");
+}
+// #1 прекрасные животные
+console.log(" ");
+
+console.log("#1 прекрасные животные");
+
+var animals_ = ["Кот", "Рыба", "Лемур", "Варан"];
+for (i = 0; i < animals_.length; i++) {
+  if (i < animals_.length - 1)
+    console.log(animals_[i] + " прекрасное животное" + ",");
+  else {
+    console.log(animals_[i] + " прекрасное животное" + ".");
+  }
+}
+console.log(" ");
+
+//#2 генератор случайных строк
+console.log("#2 генератор случайных строк");
+var alphabet = "абвгдеёжзийклмнопрстуфхцчшцъыьэюя";
+//Math.floor(Math.random() * 4)
+// var i = 0;
+var randomString = "";
+var num = 6;
+var str = 8;
+for (i = 0; i < str; i++) {
+  //каличество этераций
+  for (x = 0; x < num; x++) {
+    //количество сиволов
+    randomString += alphabet[Math.floor(Math.random() * alphabet.length)]; // присвоение случайного символа
+  }
+  if (randomString.length == num) {
+    // вывести значение только после заполнения num  символоми
+    console.log(randomString);
+    randomString = "";
+  }
+}
+console.log(" ");
+
+//#3 h4ck3r sp34k
+console.log("#3 h4ck3r sp34k");
