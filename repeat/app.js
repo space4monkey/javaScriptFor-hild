@@ -75,3 +75,28 @@ else if (sweerAndSourPork){
 }else {
   console.log("Что ж, остается рис с яйцом.");
 }
+// циклы
+//while
+var sheepCounted = 0;
+while(sheepCounted<10){
+  console.log("Посчитать овец: " + sheepCounted + "!");
+  sheepCounted++;
+}
+console.log("Хрррр");
+
+//Цикл for
+for(var sheepCounted2 = 0; sheepCounted2 < 10; sheepCounted2++){
+  console.log("Посчитать овец: "+sheepCounted2+"!");
+}
+console.log("Хрррр");
+
+//Цикл for, массивы и строки стр 105
+var animals = ["Лев","фламинго","белый медведь","удав"];
+for(var i =0; i < animals.length; i++){
+  console.log("В этои зоопарке есть " + animals[i] + ".");
+};
+//работа со строками
+var name = "Ник";
+for (var i=0; i<name.length; i++){
+  console.log("в моём имени есть буква "+name[i]+".")
+};
