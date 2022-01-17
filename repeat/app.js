@@ -33,7 +33,9 @@ var remainingLetters = word.length;
     alert(answerArray.join(" "));
 
     //запромить варианты ответа
-  var guess = prompt("Угадай букву или нажмите Отмена для выхода из игры.");
+    //дз #2
+  var guess = prompt("Угадай букву или нажмите Отмена для выхода из игры.").toLowerCase();
+ 
   if (guess === null){
     //Выход из игрового процесса
     break;
