@@ -26,5 +26,39 @@ for (var i = 0; i < word.length; i++) {
 }
 console.log(answerArray);
 var remainingLetters = word.length;
-//отоброжение сотояние игры
+
+  //игровой цикл
+  while(remainingLetters>0){
+    //показать состояние игры
+    alert(answerArray.join(" "));
+
+    //запромить варианты ответа
+  var guess = prompt("Угадай букву или нажмите Отмена для выхода из игры.");
+  if (guess === null){
+    //Выход из игрового процесса
+    break;
+  }else if (guess.length !== 1){alert("Пожалуста, введите только одну букву.");
+  }else{//Обновление состояния игры
+    for(var j=0; j<word.length; j++){
+      if (word[j] === guess){
+        answerArray[j]=guess;
+        remainingLetters--;
+      }
+    }
+  }
+  //Конец игрового цикла
+}
+//Отображение ответа и поздравление игрока
 alert(answerArray.join(" "));
+alert("Отлично! Было загадано слово " + word);
+
+
+
+
+
+
+
+
+
+
+
