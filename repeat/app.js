@@ -19,6 +19,7 @@
 
 var words = ["программа", "макака", "прекрасный", "оладушек"];
 var word = words[Math.floor(Math.random() * words.length)]; // выбераем случайное слово из массива
+var tic = 0;
 console.log(word);
 var answerArray = []; //создадим массив для заполнением "_"
 for (var i = 0; i < word.length; i++) {
@@ -26,24 +27,39 @@ for (var i = 0; i < word.length; i++) {
 }
 console.log(answerArray);
 var remainingLetters = word.length;
+tic = word.length + 3;
+//игровой цикл
+//дз #30
+console.log(tic);
+while (remainingLetters > 0 && tic > 0) {
+  //показать состояние игры
+  alert(answerArray.join(" "));
 
-  //игровой цикл
-  while(remainingLetters>0){
-    //показать состояние игры
-    alert(answerArray.join(" "));
-
-    //запромить варианты ответа
-    //дз #2
-  var guess = prompt("Угадай букву или нажмите Отмена для выхода из игры.").toLowerCase();
- 
-  if (guess === null){
-    //Выход из игрового процесса
-    break;
-  }else if (guess.length !== 1){alert("Пожалуста, введите только одну букву.");
-  }else{//Обновление состояния игры
-    for(var j=0; j<word.length; j++){
-      if (word[j] === guess){
-        answerArray[j]=guess;
+  //запромить варианты ответа
+  //дз #2
+  var guess = prompt("Угадай букву или нажмите Отмена для выхода из игры.");
+  // ).toLowerCase();
+  console.log(guess);
+  if (guess === "") {
+    //проверка строки на if (guess === null) не верна! проверяем sring на пустоту.
+    // не понятно зачем это было тут вписано?
+    // debugger;
+    //break;//Выход из игрового процесса выбивает из цикла
+    alert("Вы не ввели ни одной буквы. Пожалуста, введите только одну букву.");
+    alert("Увас осталось " + tic + " попытки");
+    console.log(tic);
+    tic--;
+  } else if (guess.length !== 1) {
+    alert("Пожалуста, введите только одну букву.");
+    alert("Увас осталось " + tic + " попытки");
+    console.log(tic);
+    tic--;
+  } //else if(){}
+  else {
+    //Обновление состояния игры
+    for (var j = 0; j < word.length; j++) {
+      if (word[j] === guess) {
+        answerArray[j] = guess;
         remainingLetters--;
       }
     }
@@ -53,14 +69,3 @@ var remainingLetters = word.length;
 //Отображение ответа и поздравление игрока
 alert(answerArray.join(" "));
 alert("Отлично! Было загадано слово " + word);
-
-
-
-
-
-
-
-
-
-
-
