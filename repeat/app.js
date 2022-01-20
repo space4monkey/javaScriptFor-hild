@@ -63,7 +63,7 @@ while (remainingLetters > 0) {
   } else {
     // Обновление состояния игры
     for (var i = 0; i < word.length; i++) {
-      if (word[i]===) {
+      if (word[i] !== answerArray[j]) {
         for (var j = 0; j < word.length; j++) {
           if (word[j] === guess) {
             answerArray[j] = guess;
