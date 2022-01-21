@@ -60,15 +60,23 @@ while (remainingLetters > 0) {
     alert("У вас осталось " + tic + " попытки");
     console.log(tic);
     tic--;
-  } else {
+  } //else if(guess){
+  //   for(var i=0; i<word.length; i++){
+  //     if(guess === answerArray[i] && "_"){
+  //       console.log("Буква введена повторно, попробуйте еще раз");
+  //     }
+  //   }
+
+  // }
+  else {
     // Обновление состояния игры
-    for (var i = 0; i < word.length; i++) {
-      if (word[i] !== answerArray[j]) {
-        for (var j = 0; j < word.length; j++) {
-          if (word[j] === guess) {
-            answerArray[j] = guess;
-            remainingLetters--;
-          }
+    //дз #4
+    for (var j = 0; j < word.length; j++) {
+      if (word[j] === guess) {
+        if (answerArray[j] === "_") {
+          // ларчик просто открывался. Читай задание внимательно.
+          answerArray[j] = guess;
+          remainingLetters--;
         }
       }
     }
