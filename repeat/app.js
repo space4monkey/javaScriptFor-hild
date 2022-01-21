@@ -73,7 +73,9 @@ while (remainingLetters > 0) {
     //дз #4
     for (var j = 0; j < word.length; j++) {
       if (word[j] === guess) {
+        //проверка на совпадение
         if (answerArray[j] === "_") {
+          //проверка на повторяемость ввода.
           // ларчик просто открывался. Читай задание внимательно.
           answerArray[j] = guess;
           remainingLetters--;
