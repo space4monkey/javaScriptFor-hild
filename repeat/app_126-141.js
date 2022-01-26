@@ -60,3 +60,19 @@ console.log(double(5) + double(6)); //22
 console.log(double(double(3))); //12
 
 //Упрощаем код с помощью функций
+
+// randomwords[Math.floor(Math.random() * randomWords.length)];
+var pickRandomWord = function (words) {
+  return words[Math.floor(Math.random() * randomWords.length)];
+};
+var randomWords = ["Планета", "Червяк", "Цветок", "Компьютер"]; //случайный массив
+console.log(pickRandomWord(randomWords));
+console.log(pickRandomWord(["Чарли", "Радж", "Никола", "Кейт", "Сенди"])); //массив отправленный сразу в функцию
+
+//генератор случайных дразнилок с134
+
+var generatoreRandomInsult = function () {
+  var randomBodyParts = ["глаза", "нос", "череп"];
+  var randomAdjctives = ["вонючая", "унылая", "дурацкая"];
+  var randomWords = ["муха", "выдра", "дубина", "мартышка", "крыса"];
+};
