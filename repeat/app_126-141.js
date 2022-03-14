@@ -63,7 +63,7 @@ console.log(double(double(3))); //12
 
 // randomwords[Math.floor(Math.random() * randomWords.length)];
 var pickRandomWord = function (words) {
-  return words[Math.floor(Math.random() * randomWords.length)];
+  return words[Math.floor(Math.random() * words.length)];
 };
 var randomWords = ["Планета", "Червяк", "Цветок", "Компьютер"]; //случайный массив
 console.log(pickRandomWord(randomWords));
@@ -75,4 +75,43 @@ var generatoreRandomInsult = function () {
   var randomBodyParts = ["глаза", "нос", "череп"];
   var randomAdjctives = ["вонючая", "унылая", "дурацкая"];
   var randomWords = ["муха", "выдра", "дубина", "мартышка", "крыса"];
+  //соединяем случайные строки в предложение:
+  var randomString =
+    "У тебя " +
+    pickRandomWord(randomBodyParts) +
+    " слово " +
+    pickRandomWord(randomAdjctives) +
+    " " +
+    pickRandomWord(randomWords) +
+    "!!!";
+  return randomString;
 };
+
+console.log(generatoreRandomInsult());
+console.log(generatoreRandomInsult());
+console.log(generatoreRandomInsult());
+
+//Ранний выход из функции по return стр.136
+var fifthLetter = function (name) {
+  if (name.length < 5) {
+    return "В имени меньше 5ть букв";
+  }
+  return "Пятая буква вашего имени: " + name[4] + ".";
+};
+console.log(fifthLetter("Igor"));
+console.log(fifthLetter("IgorLapov"));
+
+// Многократное использование returne вместо вместо конструкции if... else
+
+var medalForScore = function (score) {
+  if (score < 3) {
+    return "Бронзовая";
+  }
+  if (score < 7) {
+    return "Серебренная";
+  }
+  return "Золотая";
+};
+console.log(medalForScore(1));
+console.log(medalForScore(6));
+console.log(medalForScore(9));
