@@ -101,7 +101,7 @@ var fifthLetter = function (name) {
 console.log(fifthLetter("Igor"));
 console.log(fifthLetter("IgorLapov"));
 
-// Многократное использование returne вместо вместо конструкции if... else
+// Многократное использование returne вместо вместо конструкции if... else стр.137
 
 var medalForScore = function (score) {
   if (score < 3) {
@@ -112,6 +112,118 @@ var medalForScore = function (score) {
   }
   return "Золотая";
 };
+// тут используется return по этому гарантируется однозначный выбор
 console.log(medalForScore(1));
 console.log(medalForScore(6));
 console.log(medalForScore(9));
+
+// Упражнения стр.140
+// #1
+var add = function (x1, y1) {
+  return x1 + y1;
+};
+var multiply = function (x2, y2) {
+  return x2 * y2;
+};
+
+console.log(multiply(36325, 9824));
+fu = multiply(36325, 9824);
+console.log(add(fu, 777));
+// #2 совподают ли массивы?
+
+var areArraysSame = function (arr1, arr2) {
+  var arr3 = [];
+  var tick = arr1.length;
+  if (arr1.length !== arr2.length) {
+    return false;
+  }
+  for (i = 0; i < arr1.length; i++) {
+    for (j = 0; j < arr2.length; j++) {
+      if (arr1[i] === arr2[j]) {
+        arr3[i] += arr1[i];
+      }
+    }
+  }
+  if (tick === arr3.length) {
+    return true;
+  } else tick !== arr3.length;
+  return false;
+};
+
+console.log(areArraysSame([1, 2, 3], [4, 5, 6, 4]));
+console.log(areArraysSame([1, 2, 3], [4, 5, 6]));
+console.log(areArraysSame([1, 3, 4], [1, 2, 4]));
+
+//#3 "Виселица" и функции
+
+var pickWord = function () {
+  //возращеем случайно выбраное слово
+  var words = ["программа", "макака", "прекрасный", "оладушек"];
+  return (word = words[Math.floor(Math.random() * words.length)]);
+};
+var setupAnswerArray = function (word) {
+  //Возращает итоговый массив для заданного слова word
+  var answerArray = []; //создадим массив для заполнением "_"
+  for (var i = 0; i < word.length; i++) {
+    answerArray[i] = "_";
+  }
+  return answerArray;
+};
+var showPlayerProgress = function (answerArray) {
+  //С помощью alert отображает текущее сосотояние игры
+  alert(answerArray.join(" "));
+};
+var getGuess = function () {
+  // запращивате ответ игрока с помощью prompt
+  var guess = prompt(
+    "Угадай букву или нажмите Отмена для выхода из игры."
+  ).toLowerCase();
+  console.log(guess);
+  return guess;
+};
+var updateGameState = function (guess, word, answerArray) {
+  // Обновляет answerArray согласно отвуту игрока (guess)
+  // возращает число, обозначающее, сколько раз буква guess
+  // встречается в слове, чтобы тожно было оновить значение
+  //remainingLetters
+  for (var j = 0; j < word.length; j++) {
+    if (word[j] === guess) {
+      //проверка на совпадение
+      if (answerArray[j] === "_") {
+        //проверка на повторяемость ввода.
+        // ларчик просто открывался. Читай задание внимательно.
+        answerArray[j] = guess;
+        remainingLetters--;
+      }
+    }
+  }
+};
+var showAnswerAndCongratultePlayer = function (answerArray) {
+  // С помощью alert показывает игроку отгаданное слово
+  // и поздравляет его с победой
+  alert(answerArray.join(" "));
+  alert("Отлично! Было загадано слово " + "'" + word + "'");
+};
+
+//загаданное слово
+var word = pickWord();
+// console.log(word);
+// answerArray: итогововый массив
+var answerArray = setupAnswerArray(word);
+// remainingLetters: сколько букв осталось угадать
+var remainingLetters = word.length;
+while (remainingLetters > 0) {
+  showPlayerProgress(answerArray);
+  //guess: ответ игрока
+  var guess = getGuess();
+  if (guess === null) {
+    break;
+  } else if (guess.length !== 1) {
+    alert("Пожалуста, введите одиночную букву.");
+  } else {
+    //correctGuesses: колическо открытых букв
+    var correctGuesses = updateGameState(guess, word, answerArray);
+    remainingLetters -= correctGuesses;
+  }
+}
+showAnswerAndCongratultePlayer(answerArray);
