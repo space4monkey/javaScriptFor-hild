@@ -260,38 +260,39 @@ var updateGameState = function (guess, word, answerArray) {
   // возращает число, обозначающее, сколько раз буква guess
   // встречается в слове, чтобы тожно было обновить значение
   //remainingLetters
-  var remainingLetters = word.length;
+  var remainingLetters = 0; // возращает число, обозначающее, сколько раз буква guess!
   for (var j = 0; j < word.length; j++) {
     if (word[j] === guess) {
       answerArray[j] = guess;
-      remainingLetters--;
+      remainingLetters++;
     }
   }
   return remainingLetters;
 };
 
+var showAnswerAndCongratultePlayer = function (answerArray) {
+  // С помощью alert показывает игроку отгаданное слово
+  // и поздравляет его с победой
+  alert(answerArray.join(" "));
+  alert("Отлично! Было загадано слово " + word);
+};
+
 var words = ["программа", "макака", "прекрасный", "оладушек"];
-// Выбираем случайное слово
-//var word = words[Math.floor(Math.random() * words.length)];
+
 var word = pickWord(words.length);
 
 // Создаем итоговый массив
 var answerArray = [];
 answerArray = setupAnswerArray(word);
-// for (var i = 0; i < word.length; i++) {
-//   answerArray[i] = "_";
-// }
+
 var remainingLetters = word.length;
 // Игровой цикл
 
 while (remainingLetters > 0) {
   // Показываем состояние игры
-  // alert(answerArray.join(" "));
   showPlayerProgress(answerArray);
   // Запрашиваем вариант ответа
   var guess = getGuess();
-
-  // var guess = prompt("Угадайте букву, или нажмите Отмена для выхода из игры.");
   if (guess === null) {
     // Выходим из игрового цикла
     break;
@@ -300,6 +301,9 @@ while (remainingLetters > 0) {
   } else {
     // Обновляем состояние игры
     var correctGuesses = updateGameState(guess, word, answerArray);
+    console.log(correctGuesses);
+    console.log(remainingLetters);
+
     remainingLetters -= correctGuesses;
     // for (var j = 0; j < word.length; j++) {
     //   if (word[j] === guess) {
@@ -308,13 +312,9 @@ while (remainingLetters > 0) {
     //   }
     // }
   }
-  // Конец игрового цикла
 }
 // Отображаем ответ и поздравляем игрока
-alert(answerArray.join(" "));
-alert("Отлично! Было загадано слово " + word);
+// alert(answerArray.join(" "));
+// alert("Отлично! Было загадано слово " + word);
 
-var showAnswerAndCongratultePlayer = function (answerArray) {
-  // С помощью alert показывает игроку отгаданное слово
-  // и поздравляет его с победой
-};
+showAnswerAndCongratultePlayer(answerArray);
