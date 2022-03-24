@@ -49,3 +49,22 @@ $("p").hide().fadeIn(3000);
 $("p").append(" лучший!");
 
 //#2. Мигающий заголовок
+
+for (var i = 0; i < 2; i++) {
+  $("#main-he3").fadeIn(1000).fadeOut(1000);
+}
+for (var i = 0; i < 2; i++) {
+  $("#main-he3").fadeIn(500).fadeOut(500);
+}
+for (var i = 0; i < 2; i++) {
+  $("#main-he3").fadeIn(250).fadeOut(250);
+}
+
+//#3. Отложенная анимация
+for (var i = 0; i < 2; i++) {
+  $("#main-he4").fadeIn(1000).fadeOut(1000);
+}
+$("#main-he4").delay(5000);
+for (var i = 0; i < 2; i++) {
+  $("#main-he4").fadeIn(1000).fadeOut(1000);
+}
