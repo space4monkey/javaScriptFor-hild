@@ -38,33 +38,35 @@
 
 //Упражнения
 //#1. Перечисо\лить своих друзей (и сделать из лудшими!)
-var myFrands = ["Дима", "Максим", "Миша", "Наташа", "Павел"];
+// var myFrands = ["Дима", "Максим", "Миша", "Наташа", "Павел"];
 
-for (var i = 0; i < myFrands.length; i++) {
-  $("body").append("<p>" + myFrands[i] + "</p>");
-}
+// for (var i = 0; i < myFrands.length; i++) {
+//   $("body").append("<p>" + myFrands[i] + "</p>");
+// }
 
-$("#main-he1").text("Мои друзья");
-$("p").hide().fadeIn(3000);
-$("p").append(" лучший!");
+// $("#main-he1").text("Мои друзья");
+// $("p").hide().fadeIn(3000);
+// $("p").append(" лучший!");
 
-//#2. Мигающий заголовок
+// //#2. Мигающий заголовок
 
-for (var i = 0; i < 2; i++) {
-  $("#main-he3").fadeIn(1000).fadeOut(1000);
-}
-for (var i = 0; i < 2; i++) {
-  $("#main-he3").fadeIn(500).fadeOut(500);
-}
-for (var i = 0; i < 2; i++) {
-  $("#main-he3").fadeIn(250).fadeOut(250);
-}
+// for (var i = 0; i < 2; i++) {
+//   $("#main-he3").fadeIn(1000).fadeOut(1000);
+// }
+// for (var i = 0; i < 2; i++) {
+//   $("#main-he3").fadeIn(500).fadeOut(500);
+// }
+// for (var i = 0; i < 2; i++) {
+//   $("#main-he3").fadeIn(250).fadeOut(250);
+// }
 
-//#3. Отложенная анимация
-for (var i = 0; i < 2; i++) {
-  $("#main-he4").fadeIn(1000).fadeOut(1000);
-}
-$("#main-he4").delay(5000);
-for (var i = 0; i < 2; i++) {
-  $("#main-he4").fadeIn(1000).fadeOut(1000);
-}
+// //#3. Отложенная анимация
+// for (var i = 0; i < 2; i++) {
+//   $("#main-he4").fadeIn(1000).fadeOut(1000);
+// }
+// $("#main-he4").delay(5000);
+// for (var i = 0; i < 2; i++) {
+//   $("#main-he4").fadeIn(1000).fadeOut(1000);
+// }
+//#4. Метод fadeTo()
+$("#main-he5").fadeTo(2000, 0.1); //второй аргумент означает степень прозрачности
