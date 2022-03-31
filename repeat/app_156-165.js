@@ -58,3 +58,26 @@
 
 //Реакция на действия пользователя стр.162
 //Реакция на клик
+// не сработало(
+// var clickHandler = function (event) {
+//   console.log("Клик " + event.pageX + " " + event.pageY);
+// };
+// $("log").click(clickHandler);
+
+// $("html").mousemove(function (event) {
+//   $("#heading").offset({
+//     left: event.pageX,
+//     top: event.pageY,
+//   });
+// });
+// $(document).on("mousemove", function (event) {
+//   $("#log").text("pageX: " + event.pageX + ", pageY: " + event.pageY);
+// });
+
+//#1. Следом за кликом
+$("html").mousemove(function (event) {
+  $("#heading").offset({
+    left: event.pageX,
+    top: event.pageY,
+  });
+});
