@@ -28,7 +28,7 @@
 // var speed = 1;
 // var tik = 0;
 // var moveHeading = function () {
-//   $("#heading").offset({ left: leftOffset });
+//   $("#move").offset({ left: leftOffset });
 
 //   tik++;
 //   if (tik >= 0 && tik < 200) {
@@ -47,8 +47,8 @@
 // var leftOffset = 0;
 
 // var moveHeading = function () {
-//   $("#heading").offset({ left: leftOffset });
-//   $("#heading").offset({ left: leftOffset });
+//   $("#move").offset({ left: leftOffset });
+//   $("#move").offset({ left: leftOffset });
 //   leftOffset++;
 //   if (leftOffset > 200) {
 //     leftOffset = 0;
@@ -75,9 +75,48 @@
 // });
 
 //#1. Следом за кликом
-$("html").mousemove(function (event) {
+$(document).ready(function () {
+  $("#clickOff").click(function () {
+    $("#clickOff").hide();
+  });
+});
+
+var clickHandler = function (event) {
+  console.log("Click " + event.pageX + " " + event.pageY);
+};
+$("html").click(clickHandler); // опечвтка в книге не h1 а html
+
+// $("html").mousemove(function (event) {
+//   $("#heading").offset({
+//     left: event.pageX,
+//     top: event.pageY,
+//   });
+// });
+
+$("html").click(function (event) {
   $("#heading").offset({
     left: event.pageX,
     top: event.pageY,
   });
 });
+
+// #2. Создайте собственную анимацию
+var leftOffset = 0;
+var speed = 1;
+var tik = 0;
+var moveHeading = function () {
+  $("#move").offset({ left: leftOffset });
+
+  tik++;
+  if (tik >= 0 && tik < 200) {
+    leftOffset++;
+  }
+  if (tik > 200 && tik <= 400) {
+    leftOffset--;
+  }
+  if (tik == 401) {
+    tik = 0;
+  }
+  // console.log(tik);
+};
+setInterval(moveHeading, 10);
